@@ -44,6 +44,7 @@ public class DemoRunner {
                     Product p = new Product(id, name, qty, threshold);
                     wh.addProduct(p);
                     System.out.println("✅ Product added successfully!");
+                    break;
                 }
                 case 2 : {
                     System.out.print("Enter Product ID: ");
@@ -56,6 +57,7 @@ public class DemoRunner {
                     } catch (IllegalArgumentException e) {
                         System.out.println("⚠ " + e.getMessage());
                     }
+                    break;
                 }
                 case 3 :{
                     System.out.print("Enter Product ID: ");
@@ -67,8 +69,11 @@ public class DemoRunner {
                         System.out.println("🛒 Order fulfilled successfully!");
                     } catch (IllegalArgumentException e) {
                         System.out.println("⚠ " + e.getMessage());
+                
                     }
+                    break;  
                 }
+
                 case 4 :{
                     System.out.print("Enter Product ID: ");
                     String id = sc.nextLine();
@@ -82,14 +87,17 @@ public class DemoRunner {
                     } catch (IllegalArgumentException e) {
                         System.out.println("⚠ " + e.getMessage());
                     }
+                    break;
                 }
                 case 5 : wh.showAllProducts();
+                break;
                 case 6 : {
-                    System.out.println("👋 Exiting program. Goodbye!");
+                    System.out.println("Exiting program. Goodbye!");
                     sc.close();
                     return;
                 }
-                default : System.out.println("❌ Invalid choice. Try again.");
+                default : System.out.println("Invalid choice. Try again.");
+                break;
             }
         }
     }
